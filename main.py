@@ -31,9 +31,9 @@ def load_hub_layer():
 custom_objects = {'KerasLayer': load_hub_layer()}
 
 # Carga el modelo con objetos personalizados
-modelo_clasificacion = tf.keras.models.load_model("m2.h5", custom_objects=custom_objects)
+modelo_clasificacion = tf.keras.models.load_model("model_clasificacion.h5", custom_objects=custom_objects)
 
-modelo_validacion = tf.keras.models.load_model("m2.h5", custom_objects=custom_objects)
+modelo_validacion = tf.keras.models.load_model("model_validacion.h5", custom_objects=custom_objects)
 
 def procesar_imagen(img):
     tipos = ["Cordada", "Eliptica", "Flabelada", "Lanceolada", "Lobulada", "Obovada", "Obtusa", "Orbicular", "Ovada", "Palmeada", "Paripinnada", "Romboide", "Triangular", "Trifoliada"]
