@@ -53,7 +53,7 @@ def validar_imagen(img):
         img = cv2.resize(img, (224, 224))
         prediccion = modelo_validacion.predict(img.reshape(-1, 224, 224, 3))
         categoria_predicha = np.argmax(prediccion[0], axis=-1)
-        return {"valor": str(categoria_predicha), "mensaje": "Procesamiento exitoso"}
+        return {"valor": str(categoria_predicha), "mensaje": "Procesamiento exitoso", "porcentaje": str(prediccion)}
     except Exception as e:
         raise RuntimeError(f"Error procesando la imagen: {str(e)}")
 
