@@ -13,7 +13,8 @@ import tensorflow_hub as hub
 
 app = FastAPI()
 
-origins = ["http://localhost:3000"]
+origins = ["*"]
+
 
 app.add_middleware(
     CORSMiddleware,
